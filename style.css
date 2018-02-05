@@ -1,0 +1,63 @@
+body{
+    color: #a14148;
+    font-weight: bold;
+    
+}
+input{
+    border:1.2px solid #a14148;
+    border-radius: 5px;
+    height: 35px;
+}
+
+.name, .email {
+    width : 100%;
+}
+
+.address1{
+    padding-left: 0px;
+}
+#address1{
+    width:100%;
+}
+.ozip{
+    padding-right: 0px;
+}
+.zip{
+    width:100%;
+    margin-right:0px; 
+}
+.city , .state, .country {
+    width:100%;
+}
+.leftcity{
+    padding-left: 0px;
+    
+}
+.rightcountry {
+    padding-right:0px;
+}
+.myblock{
+    padding-top: 5px;
+    padding-bottom: 10px; 
+    
+}
+.addressblock, .stateblock{
+    padding-bottom: 20px;
+}
+#submit,#reset {
+    margin-top: 10px;
+    padding-right:5px;
+}
+
+
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+.right-addon .glyphicon { right: 0px;}
