@@ -14,7 +14,7 @@
    
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
-  <body ng-app="myApp">
+  <body ng-app="myApp"  ng-controller="myc">
     <div class="col-sm-8">
         <form name="myForm">
            <div class="myblock">
@@ -23,10 +23,10 @@
                         <i class="glyphicon glyphicon-remove"></i>
                         <input id="name" class="name" name="name" ng-model="name" required type="text">
                     </div>
-                    <p  ng-style="{visibility:myForm.name.$touched && myForm.name.$invalid  && 'visible' || 'hidden'}">
+                    <p  ng-style="{visibility : myvalidname }">
                         Please inform your name
                     </p>
-                </p>
+                    
            </div>
            <div class="myblock">
                 <p>Email*
@@ -34,7 +34,7 @@
                             <i class="glyphicon glyphicon-remove"></i>
                             <input id="email" class="email" name="email" ng-model="email" type="email" required>
                         </div>
-                        <p ng-style="{visibility: myForm.email.$touched && myForm.email.$invalid && 'visible' || 'hidden'}">
+                        <p ng-style="{visibility: myvalidemail}">
                             Please inform your email
                         </p>
                 </p>
@@ -44,9 +44,9 @@
                     <p>Address*
                             <div class ="inner-addon right-addon">
                                 <i class="glyphicon glyphicon-remove"></i>
-                                <input id="address1" name="address" ng-model="address" required>
+                                <input id="address1" name="address1" ng-model="address1" required>
                             </div>
-                        <p ng-style="{visibility: myForm.address.$touched && myForm.address.$invalid && 'visible' || 'hidden'}">
+                        <p ng-style="{visibility: myvalidaddress1}">
                             Please inform your Address
                         </p>
                     </p>
@@ -55,7 +55,7 @@
                 <span class= "col-sm-3 addressblock">
                     <p>Address*
                             <div>
-                                <input class="adress2" name="Address" ng-model="Address2" required>
+                                <input class="adress2" name="Address2" ng-model="Address2" required>
                             </div>
                     </p>
                 </span>
@@ -66,7 +66,7 @@
                             <i class="glyphicon glyphicon-remove"></i>
                             <input class= "zip" name="zip" ng-model="zip" type="number" required>
                         </div>
-                        <p  ng-style="{visibility: myForm.zip.$touched && myForm.zip.$invalid && 'visible' || 'hidden'}">
+                        <p  ng-style="{visibility: myvalidzip}">
                             Please inform your Zip
                         </p> 
                     </p>
@@ -81,7 +81,7 @@
                             <i class="glyphicon glyphicon-remove"></i>
                             <input class="city" name="city" ng-model="city" required>
                         </div>
-                    <p  ng-style="{visibility: myForm.city.$touched && myForm.city.$invalid && 'visible' || 'hidden'}">Please inform your City</p>   
+                    <p  ng-style="{visibility: myvalidcity}">Please inform your City</p>   
                     
                 </p>
                 </span>
@@ -92,7 +92,7 @@
                             <i class="glyphicon glyphicon-remove"></i>
                             <input class="state" name="state" ng-model="state" required>
                         </div>
-                    <p  ng-style="{visibility:myForm.state.$touched && myForm.state.$invalid  && 'visible' || 'hidden'}">
+                    <p  ng-style="{visibility:myvalidstate}">
                         Please inform your State
                     </p>   
                 </p>
@@ -105,7 +105,7 @@
                             <i class="glyphicon glyphicon-remove"></i>
                             <input class= "country" name="country" ng-model="country" required>
                         </div>
-                        <p  ng-style="{visibility:myForm.country.$touched && myForm.country.$invalid  && 'visible' || 'hidden'}">
+                        <p  ng-style="{visibility:myvalidcountry}">
                             Please inform your Country
                         </p>   
                     </p>
@@ -113,7 +113,7 @@
 
 
             </div>
-            <div id="downblock" ng-controller="myc">
+            <div id="downblock">
                 <button id="submit"  ng-click="submit()" class="btn btn-primary" type="submit">Submit</button>
                 <button id="reset" class="btn" type="reset">Reset</button>
             </div>
