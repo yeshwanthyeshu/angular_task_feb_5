@@ -14,7 +14,7 @@
    
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
-  <body ng-app="myApp"  ng-controller="myc">
+  <body id="wrap" ng-app="myApp"  ng-controller="myc">
     <div class="col-sm-8">
         <form name="myForm">
            <div class="myblock">
@@ -55,7 +55,7 @@
                 <span class= "col-sm-3 addressblock">
                     <p>Address*
                             <div>
-                                <input class="adress2" name="Address2" ng-model="Address2" required>
+                                <input id="address2" class="adress2" name="Address2" ng-model="Address2" required>
                             </div>
                     </p>
                 </span>
@@ -64,7 +64,7 @@
                     <p>Zip Code*
                         <div class ="inner-addon right-addon">
                             <i class="glyphicon glyphicon-remove"></i>
-                            <input class= "zip" name="zip" ng-model="zip" type="number" required>
+                            <input id="zip" class= "zip" name="zip" ng-model="zip" type="number" required>
                         </div>
                         <p  ng-style="{visibility: myvalidzip}">
                             Please inform your Zip
@@ -79,7 +79,7 @@
                     <p>City*
                         <div class ="inner-addon right-addon">
                             <i class="glyphicon glyphicon-remove"></i>
-                            <input class="city" name="city" ng-model="city" required>
+                            <input id="city" class="city" name="city" ng-model="city" required>
                         </div>
                     <p  ng-style="{visibility: myvalidcity}">Please inform your City</p>   
                     
@@ -90,7 +90,7 @@
                     <p>State/Province/region*
                         <div class ="inner-addon right-addon">
                             <i class="glyphicon glyphicon-remove"></i>
-                            <input class="state" name="state" ng-model="state" required>
+                            <input id="state" class="state" name="state" ng-model="state" required>
                         </div>
                     <p  ng-style="{visibility:myvalidstate}">
                         Please inform your State
@@ -103,7 +103,7 @@
                     <p>Country* 
                         <div class="inner-addon right-addon">
                             <i class="glyphicon glyphicon-remove"></i>
-                            <input class= "country" name="country" ng-model="country" required>
+                            <input id="country" class= "country" name="country" ng-model="country" required>
                         </div>
                         <p  ng-style="{visibility:myvalidcountry}">
                             Please inform your Country
@@ -121,7 +121,6 @@
         </form>    
    </div>
     <div id="mybox" class="col-sm-4" style="background-color:lavenderblush;">My box:</div>
-
 
   </body>
 </html>
