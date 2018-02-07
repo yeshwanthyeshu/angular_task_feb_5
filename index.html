@@ -6,15 +6,16 @@
      <!--for angular-->
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>  
      
-    <script src= "./app.js"></script>
+    
     <!--for bootstrap-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   
+        <script src= "./app.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body id="wrap" ng-app="myApp"  ng-controller="myc">
+       <div id="add"></div> 
     <div class="col-sm-8">
         <form name="myForm">
            <div class="myblock">
@@ -22,6 +23,8 @@
                     <div class ="inner-addon right-addon">
                         <i class="glyphicon glyphicon-remove"></i>
                         <input id="name" class="name" name="name" ng-model="name" required type="text">
+                        <!-- <p ng-show="hide">{{myForm.name.$touched && myForm.name.$invalid ? myvalidname="visible" : myvalidname="hidden"}}</p> -->
+                    
                     </div>
                     <p  ng-style="{visibility : myvalidname }">
                         Please inform your name
@@ -34,6 +37,8 @@
                             <i class="glyphicon glyphicon-remove"></i>
                             <input id="email" class="email" name="email" ng-model="email" type="email" required>
                         </div>
+                        <!-- <p ng-show="hide">{{myForm.email.$touched && myForm.email.$invalid ? myvalidemail="visible" : myvalidemail="hidden"}}</p> -->
+                        
                         <p ng-style="{visibility: myvalidemail}">
                             Please inform your email
                         </p>
@@ -46,6 +51,7 @@
                                 <i class="glyphicon glyphicon-remove"></i>
                                 <input id="address1" name="address1" ng-model="address1" required>
                             </div>
+                            <!-- <p ng-show="hide">{{myForm.address1.$touched && myForm.address1.$invalid ? myvalidaddress1="visible" : myvalidaddress1="hidden"}}</p>                             -->
                         <p ng-style="{visibility: myvalidaddress1}">
                             Please inform your Address
                         </p>
@@ -66,6 +72,7 @@
                             <i class="glyphicon glyphicon-remove"></i>
                             <input id="zip" class= "zip" name="zip" ng-model="zip" type="number" required>
                         </div>
+                        <!-- <p ng-show="hide">{{myForm.zip.$touched && myForm.zip.$invalid ? myvalidzip="visible" : myvalidzip="hidden"}}</p>                                                     -->
                         <p  ng-style="{visibility: myvalidzip}">
                             Please inform your Zip
                         </p> 
@@ -81,6 +88,7 @@
                             <i class="glyphicon glyphicon-remove"></i>
                             <input id="city" class="city" name="city" ng-model="city" required>
                         </div>
+                        <!-- <p ng-show="hide">{{myForm.city.$touched && myForm.city.$invalid ? myvalidcity="visible" : myvalidcity="hidden"}}</p>                                                                             -->
                     <p  ng-style="{visibility: myvalidcity}">Please inform your City</p>   
                     
                 </p>
@@ -92,6 +100,8 @@
                             <i class="glyphicon glyphicon-remove"></i>
                             <input id="state" class="state" name="state" ng-model="state" required>
                         </div>
+                        <!-- <p ng-show="hide">{{myForm.state.$touched && myForm.state.$invalid ? myvalidstate="visible" : myvalidstate="hidden"}}</p>                                                     -->
+                        
                     <p  ng-style="{visibility:myvalidstate}">
                         Please inform your State
                     </p>   
@@ -105,6 +115,7 @@
                             <i class="glyphicon glyphicon-remove"></i>
                             <input id="country" class= "country" name="country" ng-model="country" required>
                         </div>
+                        <!-- <p ng-show="hide">{{myForm.country.$touched && myForm.country.$invalid ? myvalidcountry="visible" : myvalidcountry="hidden"}}</p>                                                                             -->
                         <p  ng-style="{visibility:myvalidcountry}">
                             Please inform your Country
                         </p>   
@@ -118,9 +129,12 @@
                 <button id="reset" class="btn" type="reset">Reset</button>
             </div>
 
-        </form>    
+        </form>  
+        {{count}}  
    </div>
     <div id="mybox" class="col-sm-4" style="background-color:lavenderblush;">My box:</div>
-
+   
+    
+    
   </body>
 </html>
